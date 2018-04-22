@@ -57,6 +57,12 @@ dragPractice();
 			let container_width = -($('.image-container').width());
 			let windowWidth = $(window).width();
 
+			$(window).on('resize', function() {
+				windowWidth = $(window).width();
+				console.log('width: ' + windowWidth);
+				prevDifference = 0;
+			});
+
 			console.log("container_width: " + container_width);
 			console.log("windowWidth: " + windowWidth);
 			console.log("container_width + windowWidth: " + (container_width + windowWidth));
@@ -110,6 +116,12 @@ dragPractice();
 			let prevX = 0;
 			let container_width = -($('.image-container').width());
 			let windowWidth = $(window).width();
+
+			$(window).on('resize', function() {
+				windowWidth = $(window).width();
+				console.log('width: ' + windowWidth);
+				prevDifference = 0;
+			});
 
 			console.log("MOBILE: container_width: " + container_width);
 			console.log("MOBILE: windowWidth: " + windowWidth);
