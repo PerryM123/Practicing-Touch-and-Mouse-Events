@@ -1,66 +1,73 @@
+$mobile-breakpoint: 1000px;
+
 .container {
-			width: 100%;
-			margin: auto;
-		}
-		.mousedrag-stuff .box {
+	max-width: 1000px;
+	margin: auto;
+	@media screen and (max-width: $mobile-breakpoint) {
+		width: 100%;
+	}
+	.mousedrag-stuff {
+	 .box {
 			width: 200px;
 			border: 2px solid green;
 			display: inline-block;
 			margin: 10px;
-	    vertical-align: top;
+		  vertical-align: top;
 		}
-		.mousedrag-stuff .image-space {
+		.image-space {
 			width: 200px;
 			height: 225px;
 		}
-		.mouseUPDOWNLEFTRIGHT {
-			border: 2px solid blue;
-		  overflow: hidden;
-		  max-width: 100%;
-		  position: relative;
-		}
+	}
+	.mouseUPDOWNLEFTRIGHT {
+		border: 2px solid blue;
+	  overflow: hidden;
+	  max-width: 100%;
+	  position: relative;
 
 		.direction-button {
 			position: absolute;
 			top: 50%;
 			z-index: 100;
 			transition: .5s all;
+	    padding: 10px;
+	    background-color: red;
+			&--left {
+				left: 0;
+			}
+			&--right {
+				right: 0;
+			}
 		}
-
-		.direction-button--left {
-			left: 0;
-		}
-
-		.direction-button--right {
-			right: 0;
-		}
-
-		.mouseUPDOWNLEFTRIGHT .image-box {
+		.image-box {
 			display: inline-block;
 			padding: 0 20px;
 			border: 1px solid orange;
 			margin: 10px;
-		}
 
-		.mouseUPDOWNLEFTRIGHT .image-box img {
-	    width: 120px; 		
-	    user-drag: none; 
-user-select: none;
-user-drag: none; 
-user-select: none;
--moz-user-select: none;
--webkit-user-drag: none;
--webkit-user-select: none;
--ms-user-select: none;
-		}
-		.mouseUPDOWNLEFTRIGHT .image-box p {
-	    text-align: center; 		
+			img {
+		  width: 120px; 		
+		  user-drag: none; 
+			user-select: none;
+			user-drag: none; 
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-drag: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			}
+			p {
+			  text-align: center; 		
+			}
 		}
 		.image-container {
+			position: relative;
+	  z-index: 1;
 			width: 4490px;
-	    transform: translate3d(0px, 0px, 0);
-	    /*transition: .05s all;*/
-	    /*transition: .5s transform;*/
-  		user-select: none;          /* Likely future */ 
-
+		  transform: translate3d(0px, 0px, 0);
+		  /*transition: .05s all;*/
+		  /*transition: .5s transform;*/
+			user-select: none;          /* Likely future */ 
 		}
+	}
+}
