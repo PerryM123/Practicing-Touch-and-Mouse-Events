@@ -88,6 +88,16 @@ function imageDraggingPractice() {
 		if (mousedown === true) {
 			difference = e.pageX - prevX;
 			prevDifference += difference;
+			// debugger;
+			// puts an edge on the left-corner
+			difference > 0 ? prevDifference = 0 : null;
+
+			if (prevDifference > -(carousel_width + windowWidth)) {
+				debugger;
+		 		prevDifference = -(carousel_width + windowWidth);
+			}
+				// debugger
+			// debugger;
 			console.log('mouseup: endpoint: ' + endpoint);
 			console.log('difference: ' + difference);
 			console.log('============================');
