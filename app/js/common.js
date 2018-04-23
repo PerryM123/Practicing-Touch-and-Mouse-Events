@@ -1,3 +1,11 @@
+/*
+* Advice:
+* When using handler, separate the function for removing eventlistener
+* Example $el.removeEventListener
+*
+* This is to avoid memory leaks
+*/
+
 dragPractice();
 left_right_practice();
 imageDraggingPractice();
